@@ -5,59 +5,40 @@
   <link rel="stylesheet" href="resources/bootstrap.min.css" />
   <link rel="stylesheet" href="style.css" />
   <title>
-    Kontakt
+    Kontaktformular – sparfux
   </title>
 </head>
 
 <body>
 
+  <a href="http://sparfux-app.de">
+    <img src="https://uploads-ssl.webflow.com/5ce83e76935d742f44dd65be/5ce92eadc0831c4f7f665758_sparfux.png" width="56" alt="" class="logo-icon">
+  </a>
+  <h1 class="logo-text">sparfux</h1>
+  <div class="card">
+    <div class="card-body">
 
-
-
-  <form name="submit-to-google-sheet">
-    <div class="form-group row">
-      <label for="email" class="col-sm-2 col-form-label">Email</label>
-      <div class="col-sm-10">
-        <input type="email" class="form-control" name="email" placeholder="Email">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="firstname" class="col-sm-2 col-form-label">Vorname</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" name="firstName" placeholder="Vorname">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="lastName" class="col-sm-2 col-form-label">Nachname</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" name="lastName" placeholder="Nachname">
-      </div>
-    </div>
-    <fieldset class="form-group">
-      <div class="row">
-        <legend class="col-form-label col-sm-2 pt-0"></legend>
-        <div class="col-sm-10">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" value="option1" checked>
-            <label class="form-check-label" for="gridRadios1">
-            First radio
-          </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-            <label class="form-check-label" for="gridRadios2">
-            Second radio
-          </label>
-          </div>
-          <div class="form-check disabled">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
-            <label class="form-check-label" for="gridRadios3">
-            Third disabled radio
-          </label>
+      <form name="submit-to-google-sheet">
+        <div class="form-group row">
+          <!--          <label for="email" class="col-sm-2 col-form-label">Email</label>-->
+          <div class="col-sm-12">
+            <input type="email" class="form-control" name="email" placeholder="Email">
           </div>
         </div>
-      </div>
-    </fieldset>
+        <div class="form-group row">
+          <!--          <label for="firstname" class="col-sm-2 col-form-label">Vorname</label>-->
+          <div class="col-sm-12">
+            <input type="text" class="form-control" name="firstName" placeholder="Vorname">
+          </div>
+        </div>
+        <div class="form-group row">
+          <!--          <label for="lastName" class="col-sm-2 col-form-label">Nachname</label>-->
+          <div class="col-sm-12">
+            <input type="text" class="form-control" name="lastName" placeholder="Nachname">
+          </div>
+        </div>
+
+        <!--
     <div class="form-group row">
       <div class="col-sm-2">Checkbox</div>
       <div class="col-sm-10">
@@ -69,16 +50,21 @@
         </div>
       </div>
     </div>
-    <div class="form-group">
-      <label for="exampleFormControlTextarea1">Example textarea</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+-->
+
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Ihre Nachricht</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" name="text" rows="3"></textarea>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Abschicken</button>
+          </div>
+        </div>
+      </form>
+
     </div>
-    <div class="form-group row">
-      <div class="col-sm-10">
-        <button type="submit" class="btn btn-primary">Sign in</button>
-      </div>
-    </div>
-  </form>
+  </div>
 
   <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbx2vMTWNX_vc9kqyPoh00HW4iLfNhBZSzKe7aT73o7hjifLbco/exec'
@@ -93,7 +79,6 @@
         .then(response => console.log('Success!', response))
         .catch(error => console.error('Error!', error.message))
     })
-
   </script>
 
 
